@@ -27,7 +27,7 @@ function addProjectDetails(e) {
 	var idNumber = projectID.substr('project'.length);
 	console.log("User clicked on project " + idNumber);
 
-	var projectUrl = "http://localhost:3000/project/" + idNumber
+	var projectUrl = window.location.href + "project/" + idNumber
 	$.get(projectUrl, extractProjectDetails)
 	console.log("GET request sent to " + projectUrl)
 }
