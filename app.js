@@ -37,6 +37,9 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+// The colon adds "id" as a key and set its value to be the corresponding value
+//   in the URL. The value can be accessed using:
+//   <name_of_request>.params.<string after :>
 app.get('/project/:id', project.projectInfo);
 // Example route
 // app.get('/users', user.list);
